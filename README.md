@@ -6,7 +6,9 @@ Node API wrapper for [Streamtape](https://streamtape.com).
 
 ### Install
 
-```npm i streamtape```
+```
+npm i streamtape
+```
 
 <br>
 
@@ -38,7 +40,9 @@ Get user & pass from [Streamtape](https://streamtape.com/accpanel).
 
 ### Uninstall
 
-```npm uninstall streamtape```
+```
+npm uninstall streamtape
+```
 
 <br>
 
