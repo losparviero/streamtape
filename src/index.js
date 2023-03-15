@@ -26,7 +26,7 @@ async function download(url, user, pass) {
     );
     let downloadData = await downloadRes.json();
     downloadLink = downloadData.result.url;
-  }, 5000);
+  }, 4000);
 
   return new Promise((resolve) => {
     const checkDownloadLink = () => {
