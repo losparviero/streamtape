@@ -1,0 +1,27 @@
+{
+  "name": "streamtape",
+  "version": "1.0.0",
+  "description": "API wrapper for Streamtape.com",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/losparviero/streamtape.git"
+  },
+  "keywords": [
+    "streamtape",
+    "downloader"
+  ],
+  "author": "Zubin",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "node-fetch": "^3.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
+  },
+  "type": "module"
+}
