@@ -15,33 +15,36 @@ async function download(url, user, pass) {
 
   // Ticket
 
-  let ticketRes = await fetch(
-    `https://api.streamtape.com/file/dlticket?file=${file}&login=${user}&key=${pass}`
-  );
-  let ticketData = await ticketRes.json();
-  let ticket = ticketData.result.ticket;
-
-  // Download
-
-  let downloadLink;
-  setTimeout(async () => {
-    let downloadRes = await fetch(
-      `https://api.streamtape.com/file/dl?file=${file}&ticket=${ticket}`
+  try {
+    let ticketRes = await fetch(
+      `https://api.streamtape.com/file/dlticket?file=${file}&login=${user}&key=${pass}`
     );
-    let downloadData = await downloadRes.json();
-    downloadLink = downloadData.result.url;
-  }, 5000);
+    let ticketData = await ticketRes.json();
+    let ticket = ticketData.result.ticket;
 
-  return new Promise((resolve) => {
-    const checkDownloadLink = () => {
-      if (downloadLink) {
-        resolve({ url: downloadLink });
-      } else {
-        setTimeout(checkDownloadLink, 1000);
-      }
-    };
-    checkDownloadLink();
-  });
+    // Download
+
+    let downloadLink;
+    const downloadPromise = new Promise((resolve, reject) => {
+      setTimeout(async () => {
+        try {
+          let downloadRes = await fetch(
+            `https://api.streamtape.com/file/dl?file=${file}&ticket=${ticket}`
+          );
+          let downloadData = await downloadRes.json();
+          downloadLink = downloadData.result.url;
+          resolve(downloadLink);
+        } catch (error) {
+          reject(error);
+        }
+      }, 5000);
+    });
+
+    const result = await downloadPromise;
+    return { url: result };
+  } catch (error) {
+    return Promise.reject(error);
+  }
 }
 
 export default { download };
