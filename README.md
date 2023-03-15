@@ -16,10 +16,15 @@ npm i streamtape
 
 #### For use in a project
 
+```
 const st = require("streamtape")
+```
 
 #### For use in a module
+
+```
 import st from "streamtape"
+```
 
 <br>
 
