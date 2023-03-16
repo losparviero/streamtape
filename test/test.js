@@ -1,9 +1,8 @@
 // Add env vars as a preliminary
 
-import dotenv from "dotenv";
-dotenv.config();
-import st from "../src/index.js";
-import input from "input";
+require("dotenv").config();
+const st = require("../src/index.js");
+const input = require("input");
 
 async function getLink() {
   let url;

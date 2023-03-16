@@ -19,11 +19,10 @@
   "author": "Zubin",
   "license": "AGPL-3.0",
   "dependencies": {
-    "node-fetch": "^3.3.1"
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "dotenv": "^16.0.3",
     "input": "^1.0.1"
-  },
-  "type": "module"
+  }
 }
