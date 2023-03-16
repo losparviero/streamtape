@@ -2,6 +2,8 @@
 
 Node API wrapper for [Streamtape](https://streamtape.com).
 
+You can also check out [streamtape-dl](https://npmjs.com/streamtape-dl) for CLI use.
+
 <br>
 
 ### Install
@@ -12,7 +14,7 @@ npm i streamtape
 
 <br>
 
-### Methods
+### Usage
 
 #### For use in a project
 
@@ -28,6 +30,7 @@ import st from "streamtape"
 
 <br>
 
+### Methods
 
 ### download() Generates direct download link
 
