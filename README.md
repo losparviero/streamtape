@@ -8,7 +8,7 @@ You can also check out [streamtape-dl](https://npmjs.com/streamtape-dl) for CLI 
 
 ### Install
 
-```
+```shell
 npm i streamtape
 ```
 
@@ -18,13 +18,13 @@ npm i streamtape
 
 #### For use in a project
 
-```
+```js
 const st = require("streamtape")
 ```
 
 #### For use in a module
 
-```
+```js
 import st from "streamtape"
 ```
 
@@ -36,7 +36,7 @@ import st from "streamtape"
 
 #### Params: [url, user, pass]
 
-~~~
+~~~js
 await st.download(url, user, pass)
     .then(console.log)
     .catch((error) => console.log(error))
@@ -48,7 +48,7 @@ Get user & pass from [Streamtape](https://streamtape.com/accpanel).
 
 ### Uninstall
 
-```
+```shell
 npm uninstall streamtape
 ```
 
