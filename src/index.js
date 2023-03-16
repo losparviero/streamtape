@@ -1,5 +1,5 @@
 /*!
- * Streamtape
+ * Streamtape.js
  * Copyright(c) 2023 Zubin
  */
 
