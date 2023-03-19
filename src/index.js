@@ -1,6 +1,10 @@
 /*!
  * Streamtape.js
- * Copyright(c) 2023 Zubin
+ * Copyright(c) 2023
+ *
+ * @author Zubin
+ * @username (GitHub) losparviero
+ * @license AGPL-3.0
  */
 
 "use strict";
@@ -9,6 +13,7 @@ const request = require("request");
 
 async function download(url, user, pass) {
   // File
+
   let match = url.match(/(https?:\/\/[^\s]+)/g);
   let link = match[0];
   let file = link.split("/v/")[1];
